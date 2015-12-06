@@ -27,7 +27,7 @@ namespace OUR_LogicSimulator
       public override void calculate()
         {
             List<short?> x = new List<short?> ;
-
+            //
 
             for (int i = 0; i, x.Count ; i++){ }
            // short? x =Input[0].GetValue();
