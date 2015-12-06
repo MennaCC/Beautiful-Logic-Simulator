@@ -14,7 +14,7 @@ namespace OUR_LogicSimulator
     {
        public Gate()
         {
-
+            //this is an edit for the another branc named BackEnd
         }
       
         #region Dealing With Integers
