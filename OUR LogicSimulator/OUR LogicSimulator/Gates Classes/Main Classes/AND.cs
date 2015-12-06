@@ -10,7 +10,7 @@ using System.Windows.Forms;
 namespace OUR_LogicSimulator
 {
     public class AND : Gate
-    {
+    {//
         public AND()
         { 
         }
