@@ -1,4 +1,5 @@
-﻿using System;
+﻿using OUR_LogicSimulator.Gates_Classes;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,32 +15,28 @@ namespace OUR_LogicSimulator
         { 
         }
 
-        public override void calculateOutput()
-        {
-            
-        }
-             
+
         #region Dealing With Integers
-        public AND(TextBox Input1, TextBox Input2, TextBox Out)
+        public AND(Node Input1, Node Input2, Node Out)
         {
             Input[0] = Input1;
             Input[1] = Input2;
             Output = Out;
-
         }
-        public override void calculateInt()
+
+      public override void calculate()
         {
 
-            int x = Convert.ToInt32(Input[0].value);
-            int y = Convert.ToInt32(Input[1].Text);
+            short? x =Input[0].GetValue();
+            short? y =Input[1].GetValue();
 
             if (x == 1 && y == 1)
             {
-                Output.Text = "1";
+                Output.SetValue(1);
             }
             else
             {
-                Output.Text = "0";
+                Output.SetValue(0);
             }
         }
         #endregion

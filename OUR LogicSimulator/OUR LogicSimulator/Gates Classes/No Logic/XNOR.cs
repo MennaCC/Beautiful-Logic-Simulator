@@ -1,4 +1,5 @@
-﻿using System;
+﻿using OUR_LogicSimulator.Gates_Classes;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -16,17 +17,20 @@ namespace OUR_LogicSimulator.Classes
 
         #region Dealing With Integers
 
-        public XNOR(TextBox Input1, TextBox Input2, TextBox Out)
+        public XNOR(Node Input1, Node Input2, Node Out)
         {
             Input[0] = Input1;
             Input[1] = Input2;
             Output = Out;
         }
 
-        public override void calculateInt()
+        public override void calculate()
         {
-            XOR xor = new XOR(Input[0], Input[1], Output);
-            NOT not = new NOT(Output, Output);
+            Node tempOut = new Node();
+            XOR xor = new XOR(Input[0], Input[1], tempOut);
+            xor.validate();
+            NOT not = new NOT(tempOut, Output);
+            not.validate();
         }
 
         #endregion

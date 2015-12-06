@@ -1,9 +1,10 @@
-﻿using System;
+﻿using OUR_LogicSimulator.Gates_Classes;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Forms; 
+using System.Windows.Forms;
 
 
 namespace OUR_LogicSimulator
@@ -17,7 +18,7 @@ namespace OUR_LogicSimulator
 
 
         #region Dealing With Integers
-        public OR(TextBox Input1, TextBox Input2, TextBox Out)
+        public OR(Node Input1, Node Input2, Node Out)
         {
             Input[0] = Input1;
             Input[1] = Input2;
@@ -26,17 +27,17 @@ namespace OUR_LogicSimulator
 
         }
 
-        public override void calculateInt()
+        public override void calculate()
         {
-            int x = Convert.ToInt32(Input[0].Text);
-            int y = Convert.ToInt32(Input[1].Text);
+            short? x = Input[0].GetValue();
+            short? y = Input[1].GetValue();
             if (x == 0 && y == 0)
             {
-                Output.Text = "0";
+                Output.SetValue(0);
             }
             else
             {
-                Output.Text = "1";
+                Output.SetValue(1);
             }
 
 

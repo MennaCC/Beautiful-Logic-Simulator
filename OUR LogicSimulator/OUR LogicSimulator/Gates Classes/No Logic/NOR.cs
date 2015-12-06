@@ -1,10 +1,11 @@
-﻿using System;
+﻿using OUR_LogicSimulator.Gates_Classes;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-using System.Windows.Forms; 
+using System.Windows.Forms;
 
 namespace OUR_LogicSimulator
 {
@@ -17,17 +18,20 @@ namespace OUR_LogicSimulator
 
         #region Dealing With Integers
 
-        public NOR(TextBox Input1, TextBox Input2, TextBox Out)
+        public NOR(Node Input1, Node Input2, Node Out)
         {
             Input[0] = Input1;
             Input[1] = Input2;
             Output = Out;
         }
 
-       public override void calculateInt()
-       {
-           OR or = new OR(Input[0], Input[1], Output);
-           NOT not = new NOT(Output, Output);
+       public override void calculate()
+        {
+           Node tempOut = new Node();
+           OR or = new OR(Input[0], Input[1], tempOut);
+           or.validate();
+           NOT not = new NOT(tempOut, Output);
+           not.validate();
        }
 
         #endregion

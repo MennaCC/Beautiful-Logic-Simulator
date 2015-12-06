@@ -1,4 +1,5 @@
-﻿using System;
+﻿using OUR_LogicSimulator.Gates_Classes;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,22 +15,24 @@ namespace OUR_LogicSimulator
         }
 
 
-
         #region Dealing With Integers
 
-        public XOR(TextBox Input1, TextBox Input2, TextBox Out)
+        public XOR(Node Input1, Node Input2, Node Out)
         {
             Input[0] = Input1;
             Input[1] = Input1;
             Output = Out;
         }
         
-        public override void calculateInt()
+        public override void calculate()
         {
-           int x = Convert.ToInt32(Input[0].Text);
-           int y = Convert.ToInt32(Input[1].Text);
+            short? x = Input[0].GetValue();
+            short? y = Input[1].GetValue();
 
-           Output.Text = (x ^ y).ToString();
+            if (x == y)
+                Output.SetValue(1);
+            else
+                Output.SetValue(0);
 
         }
 

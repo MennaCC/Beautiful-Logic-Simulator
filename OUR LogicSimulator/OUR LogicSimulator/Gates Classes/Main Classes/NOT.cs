@@ -1,4 +1,5 @@
-﻿using System;
+﻿using OUR_LogicSimulator.Gates_Classes;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,51 +15,47 @@ namespace OUR_LogicSimulator
        { 
        }
 
-
-
         #region Dealing With Integers
 
-        public override void validateInt()
+
+        public NOT(Node Input1, Node Out)
         {
-            //if (Input.Length > 1)
-            //{
-            //    MessageBox.Show("Only One Input is allowed for Not Gate!");
-            //}
-            //else 
-            if (Input[0] == null || Input[0].Text == "" || Input[0].Text == null)
+            Input[0] = Input1;
+            Output = Out;
+        }
+        public override void validate()
+        {
+            if (Input.Count > 1)
             {
+                MessageBox.Show("Only One Input is allowed for Not Gate!");
+            }
+            
+            bool ThereIsNull = false;
+            if (Input[0].GetValue() == null )
+            {
+                ThereIsNull = true;
                 MessageBox.Show("Please specify an input for the Not Gate :')");
             }
-            else
-                calculateInt();
+
+            if (!ThereIsNull)
+            {
+                calculate();
+            }
+
         }
 
-        public NOT(TextBox Input1, TextBox Out)
+        public override void calculate()
        {
-           Input[0] = Input1;
-           Output = Out;
-       }
-
-       public override void calculateInt()
-       {
-            if (Input[0].Text == "0")
+            if (Input[0].GetValue() == 0)
             {
-                Output.Text = "1";
+                Output.SetValue(1);
             }
-            else if (Input[0].Text == "1")
+            else if (Input[0].GetValue() == 1)
             {
-                Output.Text = "0";
+                Output.SetValue(0);
             }
 
-            //Binary
-            //byte[] b = Convert.FromBase64String(Input[0].Text);
-            //byte[] o = new byte[2];
-            //for(int i=0; i<2; i++)
-            //{
-            //    o[i] =(byte) ~(int)(b[i]);
-            //}
-            //Output.Text = Convert.ToBase64String(o);
-
+           
         }
         #endregion
     }
