@@ -20,15 +20,15 @@ namespace OUR_LogicSimulator
 
         public NOR(Node Input1, Node Input2, Node Out)
         {
-            Input[0] = Input1;
-            Input[1] = Input2;
+            InputNodesList[0] = Input1;
+            InputNodesList[1] = Input2;
             Output = Out;
         }
 
        public override void calculate()
         {
            Node tempOut = new Node();
-           OR or = new OR(Input[0], Input[1], tempOut);
+           OR or = new OR(InputNodesList[0], InputNodesList[1], tempOut);
            or.validate();
            NOT not = new NOT(tempOut, Output);
            not.validate();

@@ -20,18 +20,18 @@ namespace OUR_LogicSimulator
 
         public NOT(Node Input1, Node Out)
         {
-            Input[0] = Input1;
+            InputNodesList[0] = Input1;
             Output = Out;
         }
         public override void validate()
         {
-            if (Input.Count > 1)
+            if (InputNodesList.Count > 1)
             {
                 MessageBox.Show("Only One Input is allowed for Not Gate!");
             }
             
             bool ThereIsNull = false;
-            if (Input[0].GetValue() == null )
+            if (InputNodesList[0].GetValue() == null )
             {
                 ThereIsNull = true;
                 MessageBox.Show("Please specify an input for the Not Gate :')");
@@ -46,11 +46,11 @@ namespace OUR_LogicSimulator
 
         public override void calculate()
        {
-            if (Input[0].GetValue() == 0)
+            if (InputNodesList[0].GetValue() == 0)
             {
                 Output.SetValue(1);
             }
-            else if (Input[0].GetValue() == 1)
+            else if (InputNodesList[0].GetValue() == 1)
             {
                 Output.SetValue(0);
             }

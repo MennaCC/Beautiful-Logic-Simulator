@@ -62,8 +62,11 @@
     <Compile Include="Gates Classes 2\XnorGate.cs" />
     <Compile Include="Gates Classes 2\XorGate.cs" />
     <Compile Include="Gates Classes\Main Classes\AND.cs" />
+    <Compile Include="Gates Classes\Main Classes\Connection.cs" />
     <Compile Include="Gates Classes\Main Classes\Gate.cs" />
+    <Compile Include="Gates Classes\Main Classes\Led.cs" />
     <Compile Include="Gates Classes\Main Classes\Node.cs" />
+    <Compile Include="Gates Classes\Main Classes\Switch.cs" />
     <Compile Include="Gates Classes\No Logic\NAND.cs" />
     <Compile Include="Gates Classes\No Logic\NOR.cs" />
     <Compile Include="Gates Classes\Main Classes\NOT.cs" />

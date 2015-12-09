@@ -19,15 +19,15 @@ namespace OUR_LogicSimulator.Classes
 
         public XNOR(Node Input1, Node Input2, Node Out)
         {
-            Input[0] = Input1;
-            Input[1] = Input2;
+            InputNodesList[0] = Input1;
+            InputNodesList[1] = Input2;
             Output = Out;
         }
 
         public override void calculate()
         {
             Node tempOut = new Node();
-            XOR xor = new XOR(Input[0], Input[1], tempOut);
+            XOR xor = new XOR(InputNodesList[0], InputNodesList[1], tempOut);
             xor.validate();
             NOT not = new NOT(tempOut, Output);
             not.validate();

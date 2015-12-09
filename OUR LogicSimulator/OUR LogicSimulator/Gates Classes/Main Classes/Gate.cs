@@ -19,11 +19,12 @@ namespace OUR_LogicSimulator
       
         #region Dealing With Integers
 
-        protected List <Node > Input = new List <Node>();
-        protected Node Output;
-        protected Node In1;
+        protected List <Node> InputNodesList = new List<Node>;
+        protected Node Output = new Node();
+       
+        /* protected Node In1;
         protected Node In2;
-        protected Node Out;
+        protected Node Out;*/
 
         //protected TextBox[] Input = new TextBox[2];
 
@@ -40,9 +41,9 @@ namespace OUR_LogicSimulator
             //check nulls in the inputs 
             //turn the flag on and break if any Null is found 
 
-            for (int i = 0; i < Input.Count; i++)
+            for (int i = 0; i < InputNodesList.Count; i++)
             {
-                if (Input[i].GetValue() == null)
+                if (InputNodesList[i].GetValue() == null)
                 {
                     ThereIsNull = true;
                     MessageBox.Show("Please Fill In All The Inputs");
@@ -61,13 +62,13 @@ namespace OUR_LogicSimulator
         //Edit the code to point to reference of Textbox
         public void SetIp1(Node Input1)
         {
-            Input[0] = Input1;
+            InputNodesList[0] = Input1;
 
         }
 
         public void SetIp2(Node Input2)
         {
-            Input[1] = Input2;
+            InputNodesList[1] = Input2;
 
         }
 
@@ -76,7 +77,19 @@ namespace OUR_LogicSimulator
             Output = Out;
 
         }
-        #endregion
+
+        public void AddIp(Node ip)
+        {
+            InputNodesList.Add(ip);
+
+        }
+
+        public Node GetOp()
+        {
+            return Output;
+        }
+        
+             #endregion
 
 
     }
