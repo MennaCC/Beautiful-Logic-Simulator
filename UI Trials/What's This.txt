@@ -1,2 +1,4 @@
-This is meant for uploading the UI trials,
+1)This is meant for uploading the UI trials,
 till they're put in the same project.
+
+2)all gates drawings are completed . 
