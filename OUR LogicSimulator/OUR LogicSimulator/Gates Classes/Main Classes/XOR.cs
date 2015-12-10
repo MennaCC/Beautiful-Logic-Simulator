@@ -19,15 +19,15 @@ namespace OUR_LogicSimulator
 
         public XOR(Node Input1, Node Input2, Node Out)
         {
-            Input[0] = Input1;
-            Input[1] = Input1;
+            InputNodesList[0] = Input1;
+            InputNodesList[1] = Input1;
             Output = Out;
         }
         
-        public override void calculate()
+        public override void calculateMinInputs()
         {
-            short? x = Input[0].GetValue();
-            short? y = Input[1].GetValue();
+            short? x = InputNodesList[0].GetValue();
+            short? y = InputNodesList[1].GetValue();
 
             if (x == y)
                 Output.SetValue(1);

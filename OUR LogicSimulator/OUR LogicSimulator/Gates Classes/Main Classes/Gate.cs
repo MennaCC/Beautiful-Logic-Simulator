@@ -10,82 +10,128 @@ using System.Windows.Forms; // i included that !!
 
 namespace OUR_LogicSimulator
 {
-   public class Gate
+    public class Gate
     {
-       public Gate()
+
+
+        #region Attributes
+        protected List<Node> InputNodesList = new List<Node>;
+        protected Node Output = new Node();
+
+        #endregion
+        
+
+
+        #region Methods With No Implementation
+        public Gate()
         {
-            //this is an edit for the another branc named BackEnd
+
         }
-      
-        #region Dealing With Integers
 
-        protected List <Node > Input = new List <Node>();
-        protected Node Output;
-        protected Node In1;
-        protected Node In2;
-        protected Node Out;
-
-        //protected TextBox[] Input = new TextBox[2];
-
+        public virtual short? calculateMinInputs(short? ip1,short? ip2)
+        {
+            return null;
+        }
 
         public virtual void calculate()
-        { 
+        {
+            short? x;
+            short? y = InputNodesList[0].GetValue();
+            for (int i = 1; i < InputNodesList.Count; i++)
+            {
+                x = InputNodesList[i].GetValue();
+                y = calculateMinInputs(x, y);
+            }
+
         }
 
-        
-        public virtual void validate()
+        #endregion
+
+
+
+        #region Methods With Implementation
+        public virtual bool checkThatAllInputsAreSet()
         {
             bool ThereIsNull = false;
 
             //check nulls in the inputs 
             //turn the flag on and break if any Null is found 
 
-            for (int i = 0; i < Input.Count; i++)
+            for (int i = 0; i < InputNodesList.Count; i++)
             {
-                if (Input[i].GetValue() == null)
+                if (InputNodesList[i].GetValue() == null)
                 {
                     ThereIsNull = true;
                     MessageBox.Show("Please Fill In All The Inputs");
                 }
 
             }
-            if (!ThereIsNull)
-            {
-                calculate(); //calculate if the flag isn't turned on
-            }
-          
+            return !ThereIsNull;
+            
+        }
+
+
+        public void AddIp(Node ip)
+        {
+            InputNodesList.Add(ip);
+            ip.AddToGatesList(this);
 
         }
 
-        //Menna 
-        //Edit the code to point to reference of Textbox
-        public void SetIp1(Node Input1)
+        public void Alert()
         {
-            Input[0] = Input1;
-
+            bool allIsSet = checkThatAllInputsAreSet();
+            if (allIsSet)
+                this.calculateMinInputs();
         }
 
-        public void SetIp2(Node Input2)
+
+        public Node GetOp()
         {
-            Input[1] = Input2;
-
-        }
-
-        public void SetOp(Node Out)
-        {
-            Output = Out;
-
+            return Output;
         }
         #endregion
 
 
+
+        #region Backend Testing Methods
+        //change the privacy of the method from private
+        //if you want to use any of them
+
+        private void SetIp1(Node Input1)
+        {
+            InputNodesList[0] = Input1;
+
+        }
+
+        private void SetIp2(Node Input2)
+        {
+            InputNodesList[1] = Input2;
+
+        }
+
+        private void SetOp(Node Out)
+        {
+            Output = Out;
+
+        }
+        /* 
+        protected Node In1;
+        protected Node In2;
+        protected Node Out;
+
+        protected TextBox[] Input = new TextBox[2];
+        */
+
+
+        #endregion
     }
 
-   
+
 
 }
 
 
-    
- 
+
+
        

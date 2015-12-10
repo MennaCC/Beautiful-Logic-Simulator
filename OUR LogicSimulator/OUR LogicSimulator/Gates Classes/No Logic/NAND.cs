@@ -24,13 +24,13 @@ namespace OUR_LogicSimulator
             Output = Out;
 
         }
-         public override void calculate()
+         public override void calculateMinInputs()
          {
              Node tempOut = new Node();
              AND and = new AND(Input[0], Input[1], tempOut);
-             and.validate();
+             and.checkThatAllInputsAreSet();
              NOT not = new NOT(tempOut, Output);
-             not.validate();
+             not.checkThatAllInputsAreSet();
 
          }
         #endregion

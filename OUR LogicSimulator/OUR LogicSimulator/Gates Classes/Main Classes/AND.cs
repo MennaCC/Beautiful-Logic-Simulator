@@ -19,19 +19,14 @@ namespace OUR_LogicSimulator
         #region Dealing With Integers
         public AND(Node Input1, Node Input2, Node Out)
         {
-            Input[0] = Input1;
-            Input[1] = Input2;
+            InputNodesList[0] = Input1;
+            InputNodesList[1] = Input2;
             Output = Out;
         }
 
-      public override void calculate()
+      public override void calculateMinInputs()
         {
-            List<short?> x = new List<short?> ;
-            //
-            //
-            for (int i = 0; i, x.Count ; i++){ }
-           // short? x =Input[0].GetValue();
-            //short? y =Input[1].GetValue();
+          
 
             if (x == 1 && y == 1)
             {

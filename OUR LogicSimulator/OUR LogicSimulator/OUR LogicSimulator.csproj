@@ -52,15 +52,6 @@
     <Compile Include="Form2.Designer.cs">
       <DependentUpon>Form2.cs</DependentUpon>
     </Compile>
-    <Compile Include="Gates Classes 2\AndGate.cs" />
-    <Compile Include="Gates Classes 2\Gate.cs" />
-    <Compile Include="Gates Classes 2\MultiInputGate.cs" />
-    <Compile Include="Gates Classes 2\NandGate.cs" />
-    <Compile Include="Gates Classes 2\NorGate.cs" />
-    <Compile Include="Gates Classes 2\NotGate.cs" />
-    <Compile Include="Gates Classes 2\OrGate.cs" />
-    <Compile Include="Gates Classes 2\XnorGate.cs" />
-    <Compile Include="Gates Classes 2\XorGate.cs" />
     <Compile Include="Gates Classes\Main Classes\AND.cs" />
     <Compile Include="Gates Classes\Main Classes\Gate.cs" />
     <Compile Include="Gates Classes\Main Classes\Node.cs" />
