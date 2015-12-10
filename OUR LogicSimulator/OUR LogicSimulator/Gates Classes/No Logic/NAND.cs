@@ -15,25 +15,23 @@ namespace OUR_LogicSimulator
         { 
         }
 
-        #region Dealing With Integers
 
-        public NAND(Node Input1, Node Input2, Node Out)
-        {
-            Input[0] = Input1;
-            Input[1] = Input2;
-            Output = Out;
+        //public NAND(Node Input1, Node Input2, Node Out)
+        //{
+        //    Input[0] = Input1;
+        //    Input[1] = Input2;
+        //    Output = Out;
 
-        }
-         public override void calculateMinInputs()
+        //}
+         public override short? calculateMinInputs(short? x, short? y)
          {
-             Node tempOut = new Node();
-             AND and = new AND(Input[0], Input[1], tempOut);
+            short result;
+             AND and = new AND(x, y, result);
              and.checkThatAllInputsAreSet();
              NOT not = new NOT(tempOut, Output);
              not.checkThatAllInputsAreSet();
 
          }
-        #endregion
     }
 
 }

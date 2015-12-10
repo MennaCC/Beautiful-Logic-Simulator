@@ -16,26 +16,28 @@ namespace OUR_LogicSimulator
         }
 
 
+        //el7etta d 3yza ttzabbat 
+
         #region Dealing With Integers
-        public AND(Node Input1, Node Input2, Node Out)
+        public AND(short Input1, short Input2, short Out)
         {
-            InputNodesList[0] = Input1;
-            InputNodesList[1] = Input2;
-            Output = Out;
+            InputNodesList[0].SetValue( Input1);
+            InputNodesList[1].SetValue( Input2);
         }
 
-      public override void calculateMinInputs()
+      public override short? calculateMinInputs(short? x, short? y)
         {
-          
 
+            short result;
             if (x == 1 && y == 1)
             {
-                Output.SetValue(1);
+                result = 1;
             }
             else
             {
-                Output.SetValue(0);
+                result = (0);
             }
+            return result;
         }
         #endregion
     }

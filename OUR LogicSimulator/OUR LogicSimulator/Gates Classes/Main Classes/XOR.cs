@@ -24,15 +24,15 @@ namespace OUR_LogicSimulator
             Output = Out;
         }
         
-        public override void calculateMinInputs()
+        public override short? calculateMinInputs(short? x, short? y)
         {
-            short? x = InputNodesList[0].GetValue();
-            short? y = InputNodesList[1].GetValue();
-
+            short result;
             if (x == y)
-                Output.SetValue(1);
+                result = (1);
             else
-                Output.SetValue(0);
+                result = (0);
+
+            return result;
 
         }
 

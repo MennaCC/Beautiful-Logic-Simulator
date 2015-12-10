@@ -43,10 +43,6 @@ namespace OUR_LogicSimulator
 
         public override void calculate()
         {
-            calculateMinInputs();
-        }
-        public override void calculateMinInputs()
-       {
             if (InputNodesList[0].GetValue() == 0)
             {
                 Output.SetValue(1);
@@ -55,9 +51,8 @@ namespace OUR_LogicSimulator
             {
                 Output.SetValue(0);
             }
-
-           
         }
+        
         #endregion
     }
 }
