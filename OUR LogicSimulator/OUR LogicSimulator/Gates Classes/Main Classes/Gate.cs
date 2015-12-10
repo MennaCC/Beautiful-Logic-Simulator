@@ -12,28 +12,30 @@ namespace OUR_LogicSimulator
 {
    public class Gate
     {
-       public Gate()
+
+
+        #region Attributes
+        protected List <Node> InputNodesList = new List<Node>;
+        protected Node Output = new Node();
+
+        #endregion
+
+        
+        #region Methods With No Implementation
+
+        public Gate()
         {
 
         }
-      
-        #region Dealing With Integers
-
-        protected List <Node> InputNodesList = new List<Node>;
-        protected Node Output = new Node();
-       
-        /* protected Node In1;
-        protected Node In2;
-        protected Node Out;*/
-
-        //protected TextBox[] Input = new TextBox[2];
-
 
         public virtual void calculate()
-        { 
+        {
         }
 
-        
+        #endregion
+
+
+        #region Methods With Implementation
         public virtual void validate()
         {
             bool ThereIsNull = false;
@@ -58,43 +60,54 @@ namespace OUR_LogicSimulator
 
         }
 
-        //Menna 
-        //Edit the code to point to reference of Textbox
-        public void SetIp1(Node Input1)
-        {
-            InputNodesList[0] = Input1;
-
-        }
-
-        public void SetIp2(Node Input2)
-        {
-            InputNodesList[1] = Input2;
-
-        }
-
-        public void SetOp(Node Out)
-        {
-            Output = Out;
-
-        }
 
         public void AddIp(Node ip)
         {
             InputNodesList.Add(ip);
 
         }
+       
 
         public Node GetOp()
         {
             return Output;
         }
-        
-             #endregion
+        #endregion
+
+        #region Backend Testing Methods
+        //change the privacy of the method from private
+        //if you want to use any of them
+
+        private void SetIp1(Node Input1)
+        {
+            InputNodesList[0] = Input1;
+
+        }
+
+        private void SetIp2(Node Input2)
+        {
+            InputNodesList[1] = Input2;
+
+        }
+
+        private void SetOp(Node Out)
+        {
+            Output = Out;
+
+        }
+        /* 
+        protected Node In1;
+        protected Node In2;
+        protected Node Out;
+
+        protected TextBox[] Input = new TextBox[2];
+        */
 
 
+        #endregion
     }
 
-   
+
 
 }
 
