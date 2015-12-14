@@ -15,7 +15,7 @@ namespace OUR_LogicSimulator
 
 
         #region Attributes
-        protected List<Node> InputNodesList = new List<Node>;
+        protected List<Node> InputNodesList = new List<Node>();
         protected Node Output = new Node();
 
         #endregion
@@ -82,7 +82,7 @@ namespace OUR_LogicSimulator
         {
             bool allIsSet = checkThatAllInputsAreSet();
             if (allIsSet)
-                this.calculateMinInputs();
+                this.calculate();//calculateMinInputs will be called inside of calculate
         }
 
 
@@ -95,26 +95,28 @@ namespace OUR_LogicSimulator
 
 
         #region Backend Testing Methods
-        //change the privacy of the method from private
-        //if you want to use any of them
-
-        private void SetIp1(Node Input1)
-        {
-            InputNodesList[0] = Input1;
-
-        }
-
-        private void SetIp2(Node Input2)
-        {
-            InputNodesList[1] = Input2;
-
-        }
-
         private void SetOp(Node Out)
         {
             Output = Out;
 
         }
+
+        //change the privacy of the method from private
+        //if you want to use any of them
+
+        /*private void SetIp1(Node Input1)
+
+              InputNodesList[0] = Input1;
+
+          }
+
+          private void SetIp2(Node Input2)
+          {
+              InputNodesList[1] = Input2;
+
+          }*/ //those methods are not needed any more as we have addip function
+
+
         /* 
         protected Node In1;
         protected Node In2;

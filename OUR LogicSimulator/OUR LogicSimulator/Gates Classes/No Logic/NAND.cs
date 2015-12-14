@@ -25,11 +25,11 @@ namespace OUR_LogicSimulator
         //}
          public override short? calculateMinInputs(short? x, short? y)
          {
-            short result;
+             short? result;
              AND and = new AND(x, y, result);
              and.checkThatAllInputsAreSet();
-             NOT not = new NOT(tempOut, Output);
-             not.checkThatAllInputsAreSet();
+             NOT not = new NOT(result, result);
+            not.checkThatAllInputsAreSet();
 
          }
     }

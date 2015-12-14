@@ -19,17 +19,18 @@ namespace OUR_LogicSimulator.Classes
 
         public XNOR(Node Input1, Node Input2, Node Out)
         {
-            Input[0] = Input1;
-            Input[1] = Input2;
+            InputNodesList[0] = Input1;
+            InputNodesList[1] = Input2;
             Output = Out;
         }
 
-        public override void calculateMinInputs()
+        public override void calculateMinInputs(short? x , short? y)
         {
-            Node tempOut = new Node();
-            XOR xor = new XOR(Input[0], Input[1], tempOut);
+            //Node tempOut = new Node();
+            short? result;
+            XOR xor = new XOR(x,y, result);
             xor.checkThatAllInputsAreSet();
-            NOT not = new NOT(tempOut, Output);
+            NOT not = new NOT(result,result);
             not.checkThatAllInputsAreSet();
         }
 

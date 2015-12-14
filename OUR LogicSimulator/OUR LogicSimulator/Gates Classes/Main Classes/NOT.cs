@@ -17,7 +17,12 @@ namespace OUR_LogicSimulator
 
         #region Dealing With Integers
 
+        public NOT(short? Input1, short? Out)
+        {
+            InputNodesList[0].SetValue(Input1);
+            Output.SetValue(Out);
 
+        }
         public NOT(Node Input1, Node Out)
         {
             InputNodesList[0] = Input1;

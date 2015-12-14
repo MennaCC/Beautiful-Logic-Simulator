@@ -19,19 +19,21 @@ namespace OUR_LogicSimulator
         //el7etta d 3yza ttzabbat 
 
         #region Dealing With Integers
-        public AND(short Input1, short Input2, short Out)
+        public AND(short? Input1, short? Input2, short? Out)
         {
             InputNodesList[0].SetValue( Input1);
             InputNodesList[1].SetValue( Input2);
+            Output.SetValue(Out);
+
         }
 
       public override short? calculateMinInputs(short? x, short? y)
         {
 
-            short result;
+            short? result;
             if (x == 1 && y == 1)
             {
-                result = 1;
+                result = (1);
             }
             else
             {

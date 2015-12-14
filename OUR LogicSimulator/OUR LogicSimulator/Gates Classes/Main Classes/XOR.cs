@@ -16,6 +16,12 @@ namespace OUR_LogicSimulator
 
 
         #region Dealing With Integers
+        public XOR(short? Input1, short? Input2, short? Out)
+        {
+            InputNodesList[0].SetValue(Input1);
+            InputNodesList[1].SetValue(Input2);
+            Output.SetValue(Out);
+        }
 
         public XOR(Node Input1, Node Input2, Node Out)
         {

@@ -11,7 +11,7 @@ namespace OUR_LogicSimulator.Gates_Classes
 
         #region Protected Attributes
         protected string Name;
-        protected short Value;
+        protected short? Value;
         protected List<Gate> GatesThatReferenceMeAsAnInput = new List<Gate>();
         #endregion
 
@@ -21,7 +21,7 @@ namespace OUR_LogicSimulator.Gates_Classes
             Name = N;
         }
 
-        public void SetValue(short v)
+        public void SetValue(short? v)
         {
             Value = v;
             //Alert the Gates that reference to this node to check the rest of the inputs
