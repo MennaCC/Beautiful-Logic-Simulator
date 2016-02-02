@@ -13,6 +13,12 @@ namespace OUR_LogicSimulator
     public class Gate
     {
 
+        #region frontEnd
+        public virtual void Draw(object sender, PaintEventArgs e)
+        {
+
+        }
+        #endregion
 
         #region Attributes
         protected List<Node> InputNodesList = new List<Node>();
@@ -30,19 +36,21 @@ namespace OUR_LogicSimulator
 
         public virtual short? calculateMinInputs(short? ip1,short? ip2)
         {
-            return null;
+            return 3;
         }
 
+        //this is overriden in Not only
         public virtual void calculate()
         {
-            short? x;
-            short? y = InputNodesList[0].GetValue();
+            
+            short? nextNodeValue;
+            short? result = InputNodesList[0].GetValue();
             for (int i = 1; i < InputNodesList.Count; i++)
             {
-                x = InputNodesList[i].GetValue();
-                y = calculateMinInputs(x, y);
+                nextNodeValue = InputNodesList[i].GetValue();
+                result = calculateMinInputs(nextNodeValue, result);
             }
-
+            this.Output.SetValue(result);
         }
 
         #endregion

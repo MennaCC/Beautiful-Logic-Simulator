@@ -20,7 +20,11 @@ namespace OUR_LogicSimulator
         {
             InputNodesList[0].SetValue(Input1);
             InputNodesList[1].SetValue(Input2);
-            Output.SetValue(Out);
+            if (this.checkThatAllInputsAreSet())
+            {
+                Out = this.calculateMinInputs(Input1, Input2);
+                Output.SetValue(Out);
+            }
         }
 
         public XOR(Node Input1, Node Input2, Node Out)

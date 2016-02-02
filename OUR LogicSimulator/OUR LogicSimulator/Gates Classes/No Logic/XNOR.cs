@@ -24,14 +24,14 @@ namespace OUR_LogicSimulator.Classes
             Output = Out;
         }
 
-        public override void calculateMinInputs(short? x , short? y)
+        public override short? calculateMinInputs(short? x , short? y)
         {
             //Node tempOut = new Node();
-            short? result;
-            XOR xor = new XOR(x,y, result);
-            xor.checkThatAllInputsAreSet();
+            short? result = null;
+            XOR xor = new XOR(x,y, result);            
             NOT not = new NOT(result,result);
-            not.checkThatAllInputsAreSet();
+            return result;
+            
         }
 
         #endregion

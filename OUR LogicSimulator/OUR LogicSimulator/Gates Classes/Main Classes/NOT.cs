@@ -1,6 +1,7 @@
 ﻿using OUR_LogicSimulator.Gates_Classes;
 using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,12 +16,31 @@ namespace OUR_LogicSimulator
        { 
        }
 
+        #region frontEnd
+
+        public override void Draw(object sender, PaintEventArgs e)
+        {
+          //  e.Graphics.DrawLine(Pens.Black, 0, 60, 40, 60);
+            e.Graphics.DrawLine(Pens.Black, 40, 40, 40, 80);
+            e.Graphics.DrawLine(Pens.Black, 40, 40, 60, 60);
+            e.Graphics.DrawLine(Pens.Black, 40, 80, 60, 60);
+            e.Graphics.DrawArc(Pens.Black, 60, 55, 10, 10, 0, 360);
+            e.Graphics.DrawLine(Pens.Black, 70, 60, 150, 60);
+        }
+
+        #endregion
+
         #region Dealing With Integers
 
         public NOT(short? Input1, short? Out)
         {
             InputNodesList[0].SetValue(Input1);
-            Output.SetValue(Out);
+            if (this.checkThatAllInputsAreSet())
+            {
+                this.calculate();
+                Out = this.Output.GetValue();
+            }
+            
 
         }
         public NOT(Node Input1, Node Out)
