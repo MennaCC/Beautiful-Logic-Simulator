@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Microsoft.VisualBasic.PowerPacks;
 
 namespace Decent_Logic_Simulator.FrontEnd
 {
@@ -67,7 +68,9 @@ namespace Decent_Logic_Simulator.FrontEnd
 
         private void rectangleShape4_MouseClick(object sender, MouseEventArgs e)
         {
-            Rectangle newRec = new Rectangle();
+            RectangleShape rec = new RectangleShape();
+
+        //SingletonForm.getFormInstance().Controls.Add(rec);
             this.DrawConnection(e);         
            
         }

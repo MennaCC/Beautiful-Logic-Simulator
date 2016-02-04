@@ -63,6 +63,8 @@ namespace Decent_Logic_Simulator
             string txt = e.X.ToString() + " " + e.Y.ToString();
             textBoxLocationEnd.Text = txt;
             DrawWire(e);
+            Microsoft.VisualBasic.PowerPacks.RectangleShape rec;
+
         }
 
         private void Form1_Load(object sender, EventArgs e)
