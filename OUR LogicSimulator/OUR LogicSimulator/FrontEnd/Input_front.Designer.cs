@@ -1,6 +1,6 @@
 ﻿namespace OUR_LogicSimulator.FrontEnd
 {
-    partial class Input_front
+    partial class Input_front: OurUserControl
     {
         /// <summary> 
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.shapeContainer1 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
+           /* this.shapeContainer1 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
             this.rectangleShape1 = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
             this.ovalShapeInner = new Microsoft.VisualBasic.PowerPacks.OvalShape();
             this.ovalShapeOuter = new Microsoft.VisualBasic.PowerPacks.OvalShape();
@@ -76,6 +76,7 @@
             this.ovalShapeOuter.Name = "ovalShapeOuter";
             this.ovalShapeOuter.Size = new System.Drawing.Size(75, 72);
             this.ovalShapeOuter.Click += new System.EventHandler(this.ovalShapeInner_Click);
+            */
             // 
             // Input_front
             // 

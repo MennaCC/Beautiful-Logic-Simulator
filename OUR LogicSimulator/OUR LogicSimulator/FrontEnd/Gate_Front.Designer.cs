@@ -1,6 +1,6 @@
 ﻿namespace OUR_LogicSimulator.FrontEnd
 {
-    partial class Gate_Front
+    partial class Gate_Front: OurUserControl
     {
         /// <summary> 
         /// Required designer variable.

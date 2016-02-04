@@ -14,8 +14,7 @@ namespace OUR_LogicSimulator.FrontEnd
     {
         public OurUserControl()
         {
-            InitializeComponent();
-            
+            InitializeComponent();           
 
         }
 

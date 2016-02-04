@@ -1,6 +1,8 @@
-﻿namespace OUR_LogicSimulator.FrontEnd
+﻿using System.Windows.Forms;
+
+namespace OUR_LogicSimulator.FrontEnd
 {
-    partial class OurUserControl
+    partial class OurUserControl : UserControl
     {
         /// <summary> 
         /// Required designer variable.
