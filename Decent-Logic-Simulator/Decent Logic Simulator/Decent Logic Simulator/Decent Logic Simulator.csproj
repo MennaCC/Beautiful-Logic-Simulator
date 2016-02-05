@@ -73,6 +73,12 @@
     <Compile Include="FrontEnd\Input_Front.Designer.cs">
       <DependentUpon>Input_Front.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrontEnd\newInputRectangle.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\newInputRectangle.Designer.cs">
+      <DependentUpon>newInputRectangle.cs</DependentUpon>
+    </Compile>
     <Compile Include="Gates Classes\Main Logic\AND.cs" />
     <Compile Include="Gates Classes\Main Logic\Gate.cs" />
     <Compile Include="Gates Classes\Main Logic\Node.cs" />
@@ -96,6 +102,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrontEnd\Input_Front.resx">
       <DependentUpon>Input_Front.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrontEnd\newInputRectangle.resx">
+      <DependentUpon>newInputRectangle.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

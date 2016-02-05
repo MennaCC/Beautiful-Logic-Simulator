@@ -68,9 +68,14 @@ namespace Decent_Logic_Simulator.FrontEnd
 
         private void rectangleShape4_MouseClick(object sender, MouseEventArgs e)
         {
-            RectangleShape rec = new RectangleShape();
-
-        //SingletonForm.getFormInstance().Controls.Add(rec);
+            // newRectangle rect = new newRectangle();
+            //SingletonForm.getFormInstance().Controls.Add(rect);
+            newInputRectangle newInputRect = new newInputRectangle();
+            SingletonForm.getFormInstance().Controls.Add(newInputRect);
+            int xPosition = this.rectangleShape4.Location.X;
+            int yPosition = this.rectangleShape4.Location.Y;
+            newInputRect.Location = new Point(xPosition, yPosition);
+            newInputRect.BringToFront();
             this.DrawConnection(e);         
            
         }
