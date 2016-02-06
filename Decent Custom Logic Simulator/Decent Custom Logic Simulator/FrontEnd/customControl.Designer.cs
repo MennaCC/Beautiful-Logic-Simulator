@@ -1,13 +1,13 @@
-﻿namespace Decent_Logic_Simulator.FrontEnd
+﻿namespace Decent_Custom_Logic_Simulator.FrontEnd
 {
-    partial class DecentUserControl
+    partial class customControl
     {
-        /// <summary> 
+        /// <summary>
         /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary> 
+        /// <summary>
         /// Clean up any resources being used.
         /// </summary>
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
@@ -22,12 +22,14 @@
 
         #region Component Designer generated code
 
-        /// <summary> 
+        /// <summary>
         /// Required method for Designer support - do not modify 
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent()
         {
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel1.SuspendLayout();
             this.shapeContainer2 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
             this.rectangleShape4 = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
             this.rectangleShape5 = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
@@ -50,10 +52,10 @@
             // rectangleShape4
             // 
             this.rectangleShape4.BorderColor = System.Drawing.SystemColors.Control;
-            this.rectangleShape4.FillColor = System.Drawing.Color.SpringGreen;
-            this.rectangleShape4.FillGradientColor = System.Drawing.Color.MediumSpringGreen;
-            this.rectangleShape4.FillGradientStyle = Microsoft.VisualBasic.PowerPacks.FillGradientStyle.Central;
-            this.rectangleShape4.FillStyle = Microsoft.VisualBasic.PowerPacks.FillStyle.Solid;
+            //this.rectangleShape4.FillColor = System.Drawing.Color.SpringGreen;
+            //this.rectangleShape4.FillGradientColor = System.Drawing.Color.MediumSpringGreen;
+            //this.rectangleShape4.FillGradientStyle = Microsoft.VisualBasic.PowerPacks.FillGradientStyle.Central;
+            //this.rectangleShape4.FillStyle = Microsoft.VisualBasic.PowerPacks.FillStyle.Solid;
             this.rectangleShape4.Location = new System.Drawing.Point(135, 67);
             this.rectangleShape4.Name = "rectangleShape4";
             this.rectangleShape4.Size = new System.Drawing.Size(14, 15);
@@ -81,23 +83,30 @@
             this.rectangleShape6.FillStyle = Microsoft.VisualBasic.PowerPacks.FillStyle.Solid;
             this.rectangleShape6.Location = new System.Drawing.Point(-1, 103);
             this.rectangleShape6.Name = "rectangleShape6";
-            this.rectangleShape6.Size = new System.Drawing.Size(14, 15);
+            this.rectangleShape6.Size = new System.Drawing.Size(14, 15);            
             // 
-            // DecentUserControl
+            // panel1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(200, 100);
+            this.panel1.TabIndex = 0;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+
+            //this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            //this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.shapeContainer2);
-            this.Name = "DecentUserControl";
+            this.Name = "customControl";
+            this.BackColor = System.Drawing.Color.Bisque;
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.DecentUserControl_Paint);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.OurUserControl_MouseDown);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.OurUserControl_MouseMove);
             this.ResumeLayout(false);
-
         }
 
         #endregion
 
+        private System.Windows.Forms.Panel panel1;
         private Microsoft.VisualBasic.PowerPacks.ShapeContainer shapeContainer2;
         private Microsoft.VisualBasic.PowerPacks.RectangleShape rectangleShape6;
         private Microsoft.VisualBasic.PowerPacks.RectangleShape rectangleShape5;

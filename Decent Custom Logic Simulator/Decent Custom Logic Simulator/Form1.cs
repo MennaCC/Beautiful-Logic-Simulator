@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Decent_Custom_Logic_Simulator.FrontEnd;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -20,8 +21,8 @@ namespace Decent_Custom_Logic_Simulator
         private Point startPoint, endPoint;
 
          #region Methods that Work with frontEnd 
-        /*
-        public void DrawOnForm(Point start, DecentUserControl SenderCntrl)
+        
+        public void DrawOnForm(Point start, customControl SenderCntrl)
         {
             this.startPoint.X = start.X + SenderCntrl.Location.X;
             this.startPoint.Y = start.Y + SenderCntrl.Location.Y;
@@ -29,7 +30,7 @@ namespace Decent_Custom_Logic_Simulator
             SingletonForm.getFormInstance().textBoxLocation.Text = txt;
 
         }
-        */
+        
         private void buttonGate_Click(object sender, EventArgs e)
         {
             //<summary>
@@ -37,18 +38,15 @@ namespace Decent_Custom_Logic_Simulator
             //// for example a button Named "OR" will create an OR gate and call its draw function
             //// also that class is responsible for handling interactions with the gate object from the front end.
             //</summary>
-            /*
+            
             Gate_Front newGate = new Gate_Front(ActiveControl.Name.ToString());
             this.Controls.Add(newGate);
-            */
-
         }
+
         private void Switch_Click(object sender, EventArgs e)
         {
-            /*
             Input_Front s = new Input_Front();
             this.Controls.Add(s);
-            */
         }
         #endregion 
 
@@ -72,7 +70,7 @@ namespace Decent_Custom_Logic_Simulator
             string txt = e.X.ToString() + " " + e.Y.ToString();
             textBoxLocationEnd.Text = txt;
             DrawWire(e);
-            Microsoft.VisualBasic.PowerPacks.RectangleShape rec;
+            //Microsoft.VisualBasic.PowerPacks.RectangleShape rec;
 
         }
 
