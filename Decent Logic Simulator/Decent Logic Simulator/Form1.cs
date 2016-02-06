@@ -72,6 +72,5 @@ namespace Decent_Logic_Simulator
             
         }
 
-       
     }
 }

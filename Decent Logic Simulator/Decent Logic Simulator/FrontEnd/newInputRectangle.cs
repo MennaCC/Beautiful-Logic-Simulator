@@ -26,5 +26,7 @@ namespace Decent_Logic_Simulator.FrontEnd
                 this.Top = e.Y + this.Top - mol.Y;
             }
         }
+
+        
     }
 }
