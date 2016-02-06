@@ -36,6 +36,21 @@ namespace Decent_Logic_Simulator.FrontEnd
                 this.Left = e.X + this.Left - mol.X;
                 this.Top = e.Y + this.Top - mol.Y;
             }
+            if (newRect != null)
+            {
+                newInputRectMove(sender, e);
+            }
+        }
+
+        private newInputRectangle newRect;
+
+        private void newInputRectMove(object sender, MouseEventArgs e)
+        {
+            if (e.Button == System.Windows.Forms.MouseButtons.Left)
+            {
+                newRect.Left = e.X + newRect.Left - mol.X ;
+                newRect.Top = e.Y + newRect.Top - mol.Y ;
+            }
         }
 
         private void rectangleShape5_Click(object sender, EventArgs e)
@@ -68,12 +83,12 @@ namespace Decent_Logic_Simulator.FrontEnd
 
         private void rectangleShape4_MouseClick(object sender, MouseEventArgs e)
         {
-            // newRectangle rect = new newRectangle();
-            //SingletonForm.getFormInstance().Controls.Add(rect);
             newInputRectangle newInputRect = new newInputRectangle();
+            newRect = newInputRect;
             SingletonForm.getFormInstance().Controls.Add(newInputRect);
-            int xPosition = this.rectangleShape4.Location.X;
-            int yPosition = this.rectangleShape4.Location.Y;
+            int xPosition = this.rectangleShape4.Location.X + this.rectangleShape4.Parent.Location.X;
+            int yPosition = this.rectangleShape4.Location.Y + this.rectangleShape4.Parent.Location.Y;
+           // Point p = rectangleShape4.Parent.PointToScreen(rectangleShape4.Location);
             newInputRect.Location = new Point(xPosition, yPosition);
             newInputRect.BringToFront();
             this.DrawConnection(e);         
