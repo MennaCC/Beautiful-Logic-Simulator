@@ -83,8 +83,6 @@ namespace Decent_Logic_Simulator.FrontEnd
 
         private void rectangleShape4_MouseClick(object sender, MouseEventArgs e)
         {
-            // newRectangle rect = new newRectangle();
-            //SingletonForm.getFormInstance().Controls.Add(rect);
             newInputRectangle newInputRect = new newInputRectangle();
             newRect = newInputRect;
             SingletonForm.getFormInstance().Controls.Add(newInputRect);
