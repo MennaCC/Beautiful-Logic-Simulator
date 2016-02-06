@@ -1,5 +1,4 @@
-﻿using Decent_Logic_Simulator.FrontEnd;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -9,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Decent_Logic_Simulator
+namespace Decent_Custom_Logic_Simulator
 {
     public partial class Form1 : Form
     {
@@ -17,9 +16,12 @@ namespace Decent_Logic_Simulator
         {
             InitializeComponent();
         }
+
         private Point startPoint, endPoint;
 
-        public void DrawOnForm(Point start,DecentUserControl SenderCntrl)
+         #region Methods that Work with frontEnd 
+        /*
+        public void DrawOnForm(Point start, DecentUserControl SenderCntrl)
         {
             this.startPoint.X = start.X + SenderCntrl.Location.X;
             this.startPoint.Y = start.Y + SenderCntrl.Location.Y;
@@ -27,6 +29,7 @@ namespace Decent_Logic_Simulator
             SingletonForm.getFormInstance().textBoxLocation.Text = txt;
 
         }
+        */
         private void buttonGate_Click(object sender, EventArgs e)
         {
             //<summary>
@@ -34,15 +37,21 @@ namespace Decent_Logic_Simulator
             //// for example a button Named "OR" will create an OR gate and call its draw function
             //// also that class is responsible for handling interactions with the gate object from the front end.
             //</summary>
+            /*
             Gate_Front newGate = new Gate_Front(ActiveControl.Name.ToString());
             this.Controls.Add(newGate);
+            */
 
         }
         private void Switch_Click(object sender, EventArgs e)
         {
+            /*
             Input_Front s = new Input_Front();
             this.Controls.Add(s);
+            */
         }
+        #endregion 
+
         private void LED_Click(object sender, EventArgs e)
         {
 
@@ -69,9 +78,7 @@ namespace Decent_Logic_Simulator
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            
-        }
 
-       
+        }
     }
 }

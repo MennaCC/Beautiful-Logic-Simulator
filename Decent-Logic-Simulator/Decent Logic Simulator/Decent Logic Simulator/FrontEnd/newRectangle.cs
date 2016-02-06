@@ -10,21 +10,16 @@ using System.Windows.Forms;
 
 namespace Decent_Logic_Simulator.FrontEnd
 {
-    public partial class newInputRectangle : UserControl
+    public partial class newRectangle : DecentUserControl 
     {
-        public newInputRectangle()
+        public newRectangle()
         {
             InitializeComponent();
         }
         private Point mol;
-
-        private void newInputRectangle_MouseMove_1(object sender, MouseEventArgs e)
+        private void newRectangle_MouseMove(object sender, MouseEventArgs e)
         {
-            if (e.Button == System.Windows.Forms.MouseButtons.Left)
-            {
-                this.Left = e.X + this.Left - mol.X;
-                this.Top = e.Y + this.Top - mol.Y;
-            }
+            
         }
     }
 }
