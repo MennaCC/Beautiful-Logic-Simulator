@@ -52,10 +52,10 @@
             // rectangleShape4
             // 
             this.rectangleShape4.BorderColor = System.Drawing.SystemColors.Control;
-            //this.rectangleShape4.FillColor = System.Drawing.Color.SpringGreen;
-            //this.rectangleShape4.FillGradientColor = System.Drawing.Color.MediumSpringGreen;
-            //this.rectangleShape4.FillGradientStyle = Microsoft.VisualBasic.PowerPacks.FillGradientStyle.Central;
-            //this.rectangleShape4.FillStyle = Microsoft.VisualBasic.PowerPacks.FillStyle.Solid;
+            this.rectangleShape4.FillColor = System.Drawing.Color.SpringGreen;
+            this.rectangleShape4.FillGradientColor = System.Drawing.Color.MediumSpringGreen;
+            this.rectangleShape4.FillGradientStyle = Microsoft.VisualBasic.PowerPacks.FillGradientStyle.Central;
+            this.rectangleShape4.FillStyle = Microsoft.VisualBasic.PowerPacks.FillStyle.Solid;
             this.rectangleShape4.Location = new System.Drawing.Point(135, 67);
             this.rectangleShape4.Name = "rectangleShape4";
             this.rectangleShape4.Size = new System.Drawing.Size(14, 15);

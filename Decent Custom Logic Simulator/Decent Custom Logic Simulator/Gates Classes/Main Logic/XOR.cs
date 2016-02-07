@@ -16,7 +16,7 @@ namespace OUR_LogicSimulator
         }
 
         #region frontEnd
-        public override void Draw(object sender, PaintEventArgs e)
+        public override void Draw(PaintEventArgs e)
         {
             int x = 0;
             int y = 30;

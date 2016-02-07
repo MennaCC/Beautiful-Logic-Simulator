@@ -16,20 +16,20 @@ namespace Decent_Custom_Logic_Simulator.FrontEnd
         public Gate_Front(string gateType)
         {
             InitializeComponent();
-            this.gateType = gateType;
+            this.gateType = gateType;           
         }
 
         protected override void OnPaint(PaintEventArgs pe)
         {
-            base.OnPaint(pe);
-            createGateDueToType(null, pe);
+            //base.OnPaint(pe);
+            createGateDueToType(pe);
         }
 
         #region Private Attributes
         private string gateType = null;
         #endregion
 
-        private void createGateDueToType(object sender, PaintEventArgs e)
+        private void createGateDueToType(PaintEventArgs e)
         {
 
             //switch can be replaced by a one line of code using runtime Creation ((gotta GOOGLE it))
@@ -53,7 +53,7 @@ namespace Decent_Custom_Logic_Simulator.FrontEnd
                     g = null;
                     break;
             }
-            g.Draw(sender, e);
+            g.Draw(e);
 
         }
     }

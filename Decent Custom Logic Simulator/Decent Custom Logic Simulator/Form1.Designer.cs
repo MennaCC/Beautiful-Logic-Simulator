@@ -209,11 +209,10 @@ namespace Decent_Custom_Logic_Simulator
             // 
             // customControl1
             // 
-            this.customControl1.BackColor = System.Drawing.Color.Moccasin;
-            this.customControl1.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.customControl1.Location = new System.Drawing.Point(337, 171);
+            this.customControl1.BackColor = System.Drawing.Color.Bisque;
+            this.customControl1.Location = new System.Drawing.Point(199, 209);
             this.customControl1.Name = "customControl1";
-            this.customControl1.Size = new System.Drawing.Size(200, 200);
+            this.customControl1.Size = new System.Drawing.Size(159, 135);
             this.customControl1.TabIndex = 13;
             this.customControl1.Text = "customControl1";
             // 

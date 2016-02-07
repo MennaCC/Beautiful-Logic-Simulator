@@ -17,7 +17,7 @@ namespace OUR_LogicSimulator
         }
 
         #region frontEnd
-        public override void Draw(object sender, PaintEventArgs e)
+        public override void Draw(PaintEventArgs e)
         {
             //e.Graphics.DrawRectangle(Pens.Black, 30, 40, 10, 10);
             //e.Graphics.DrawRectangle(Pens.Black, 30, 70, 10, 10);

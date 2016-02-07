@@ -36,7 +36,8 @@
             //this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             //this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Name = "Gate_Front";
-            this.Paint += new System.Windows.Forms.PaintEventHandler(this.createGateDueToType);
+            this.SetBounds(0,0,150,150);
+            //this.Paint += new System.Windows.Forms.PaintEventHandler(this.createGateDueToType);
             this.ResumeLayout(false);
         }
 
