@@ -96,6 +96,9 @@
     <EmbeddedResource Include="FrontEnd\customControl.resx">
       <DependentUpon>customControl.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrontEnd\Gate_Front.resx">
+      <DependentUpon>Gate_Front.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrontEnd\Input_Front.resx">
       <DependentUpon>Input_Front.cs</DependentUpon>
     </EmbeddedResource>

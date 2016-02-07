@@ -35,10 +35,13 @@
             // 
             //this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             //this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Red;
+            
+            this.BackColor = System.Drawing.Color.Firebrick;
             this.Name = "Node_Front";
-            this.Size = new System.Drawing.Size(12, 10);
+            this.SetBounds(0, 0, 10, 10);
+            this.Size = new System.Drawing.Size(16, 14);
             this.ResumeLayout(false);
+
         }
 
         #endregion

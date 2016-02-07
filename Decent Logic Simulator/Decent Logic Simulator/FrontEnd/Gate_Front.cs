@@ -19,6 +19,20 @@ namespace Decent_Logic_Simulator.FrontEnd
             this.gateType = gateType;
         }
 
+        //private void OurUserControl_MouseMove(object sender, MouseEventArgs e)
+        //{
+        //    if (e.Button == System.Windows.Forms.MouseButtons.Left)
+        //    {
+        //         OurLocation = e.Location;
+        //    }
+            
+        //}
+
+        public Point getLoaction()
+        {
+            return this.Location;
+        }
+
         #region Private Attributes
         private string gateType = null;
         #endregion

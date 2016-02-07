@@ -56,5 +56,9 @@ namespace Decent_Custom_Logic_Simulator.FrontEnd
             g.Draw(e);
 
         }
-    }
+        private void rectangleShape4_MouseClick(object sender, MouseEventArgs e)
+        {
+            this.generateNode(rectangleShape4, this.Location, e);
+        }
+}
 }

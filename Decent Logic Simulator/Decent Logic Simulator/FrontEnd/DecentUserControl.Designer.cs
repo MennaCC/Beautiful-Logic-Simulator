@@ -101,6 +101,6 @@
         private Microsoft.VisualBasic.PowerPacks.ShapeContainer shapeContainer2;
         private Microsoft.VisualBasic.PowerPacks.RectangleShape rectangleShape6;
         private Microsoft.VisualBasic.PowerPacks.RectangleShape rectangleShape5;
-        private Microsoft.VisualBasic.PowerPacks.RectangleShape rectangleShape4;
+        protected Microsoft.VisualBasic.PowerPacks.RectangleShape rectangleShape4;
     }
 }
