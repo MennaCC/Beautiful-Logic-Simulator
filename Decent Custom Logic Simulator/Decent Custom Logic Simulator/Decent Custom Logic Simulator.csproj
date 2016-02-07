@@ -55,9 +55,51 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrontEnd\customControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\customControl.Designer.cs">
+      <DependentUpon>customControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrontEnd\Gate_Front.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\Gate_Front.Designer.cs">
+      <DependentUpon>Gate_Front.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrontEnd\Input_Front.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\Input_Front.Designer.cs">
+      <DependentUpon>Input_Front.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrontEnd\Node_Front.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\Node_Front.Designer.cs">
+      <DependentUpon>Node_Front.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gates Classes\Main Logic\AND.cs" />
+    <Compile Include="Gates Classes\Main Logic\Gate.cs" />
+    <Compile Include="Gates Classes\Main Logic\Node.cs" />
+    <Compile Include="Gates Classes\Main Logic\NOT.cs" />
+    <Compile Include="Gates Classes\Main Logic\OR.cs" />
+    <Compile Include="Gates Classes\Main Logic\XOR.cs" />
+    <Compile Include="Gates Classes\No Logic\NAND.cs" />
+    <Compile Include="Gates Classes\No Logic\NOR.cs" />
+    <Compile Include="Gates Classes\No Logic\XNOR.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SingletonForm.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrontEnd\customControl.resx">
+      <DependentUpon>customControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrontEnd\Input_Front.resx">
+      <DependentUpon>Input_Front.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -80,10 +122,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Gates Classes\Main Classes\" />
-    <Folder Include="Gates Classes\No Logic\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
