@@ -13,10 +13,22 @@ namespace Decent_Custom_Logic_Simulator
 {
     public partial class Form1 : Form
     {
-        public Form1()
+        #region Singleton
+        private static Form1 instance;
+        private Form1()
         {
             InitializeComponent();
         }
+
+        public static Form1 getInstance()
+        {
+            if(instance == null)
+            {
+                instance = new Form1();
+            }
+            return instance;
+        }
+        #endregion
 
         private Point startPoint, endPoint;
 
@@ -39,7 +51,7 @@ namespace Decent_Custom_Logic_Simulator
             //// also that class is responsible for handling interactions with the gate object from the front end.
             //</summary>
             
-            Gate_Front newGate = new Gate_Front(ActiveControl.Name.ToString());
+            Gate_Front newGate = new Gate_Front(ActiveControl.Name);
             this.Controls.Add(newGate);
         }
 

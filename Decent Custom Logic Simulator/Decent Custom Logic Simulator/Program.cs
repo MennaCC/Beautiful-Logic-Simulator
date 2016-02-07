@@ -16,7 +16,7 @@ namespace Decent_Custom_Logic_Simulator
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Form1 ourBeautifulForm = SingletonForm.getFormInstance();
+            Form1 ourBeautifulForm = Form1.getInstance();
             Application.Run(ourBeautifulForm);
         }
     }

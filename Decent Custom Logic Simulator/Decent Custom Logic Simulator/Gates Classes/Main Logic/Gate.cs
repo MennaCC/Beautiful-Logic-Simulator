@@ -14,7 +14,7 @@ namespace OUR_LogicSimulator
     {
 
         #region frontEnd
-        public virtual void Draw(object sender, PaintEventArgs e)
+        public virtual void Draw(PaintEventArgs e)
         {
 
         }

@@ -43,7 +43,6 @@ namespace Decent_Custom_Logic_Simulator
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.textBoxLocation = new System.Windows.Forms.TextBox();
             this.textBoxLocationEnd = new System.Windows.Forms.TextBox();
-            this.customControl1 = new Decent_Custom_Logic_Simulator.FrontEnd.customControl();
             this.toolStrip1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -207,23 +206,12 @@ namespace Decent_Custom_Logic_Simulator
             this.textBoxLocationEnd.Size = new System.Drawing.Size(100, 20);
             this.textBoxLocationEnd.TabIndex = 12;
             // 
-            // customControl1
-            // 
-            this.customControl1.BackColor = System.Drawing.Color.Moccasin;
-            this.customControl1.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.customControl1.Location = new System.Drawing.Point(337, 171);
-            this.customControl1.Name = "customControl1";
-            this.customControl1.Size = new System.Drawing.Size(200, 200);
-            this.customControl1.TabIndex = 13;
-            this.customControl1.Text = "customControl1";
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MintCream;
             this.ClientSize = new System.Drawing.Size(815, 468);
-            this.Controls.Add(this.customControl1);
             this.Controls.Add(this.textBoxLocationEnd);
             this.Controls.Add(this.textBoxLocation);
             this.Controls.Add(this.flowLayoutPanel1);
@@ -257,7 +245,6 @@ namespace Decent_Custom_Logic_Simulator
             private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
             public System.Windows.Forms.TextBox textBoxLocation;
             public System.Windows.Forms.TextBox textBoxLocationEnd;
-        private FrontEnd.customControl customControl1;
     }
     }
 
