@@ -39,7 +39,7 @@ namespace Decent_Custom_Logic_Simulator
             this.startPoint.X = start.X + SenderCntrl.Location.X;
             this.startPoint.Y = start.Y + SenderCntrl.Location.Y;
             String txt = startPoint.X.ToString() + " " + startPoint.Y.ToString();
-            SingletonForm.getFormInstance().textBoxLocation.Text = txt;
+            Form1.getInstance().textBoxLocation.Text = txt;
 
         }
         
