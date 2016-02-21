@@ -81,7 +81,7 @@ namespace Decent_Custom_Logic_Simulator.FrontEnd
             //this.nodeFront4.FillGradientColor = System.Drawing.Color.MediumSpringGreen;
             //this.nodeFront4.FillGradientStyle = Microsoft.VisualBasic.PowerPacks.FillGradientStyle.Central;
             //this.nodeFront4.FillStyle = Microsoft.VisualBasic.PowerPacks.FillStyle.Solid;
-            this.nodeFront4.Location = new System.Drawing.Point(72, 35);
+            this.nodeFront4.Location = new System.Drawing.Point(70, 35);
             this.nodeFront4.Name = "nodeFront4";
             this.nodeFront4.Size = new System.Drawing.Size(7, 7);
             this.nodeFront4.MouseDown += new System.Windows.Forms.MouseEventHandler(this.rectangleShapeMouseDowmn);
@@ -104,10 +104,10 @@ namespace Decent_Custom_Logic_Simulator.FrontEnd
             //this.nodeFront5.FillGradientColor = System.Drawing.Color.DeepPink;
             //this.nodeFront5.FillGradientStyle = Microsoft.VisualBasic.PowerPacks.FillGradientStyle.Central;
             //this.nodeFront5.FillStyle = Microsoft.VisualBasic.PowerPacks.FillStyle.Solid;
-            this.nodeFront5.Location = new System.Drawing.Point(0, 11);
+            this.nodeFront5.Location = new System.Drawing.Point(15, 11);
             this.nodeFront5.Name = "nodeFront5";
             this.nodeFront5.Size = new System.Drawing.Size(14, 14);
-            this.nodeFront5.BackColor = System.Drawing.Color.Black;
+            //this.nodeFront5.BackColor = System.Drawing.Color.Black;
             this.nodeFront5.DragDrop += new System.Windows.Forms.DragEventHandler(this.nodeFront5_DragDrop);
             this.nodeFront5.DragEnter += new System.Windows.Forms.DragEventHandler(this.nodeFront5_DragEnter);
             this.nodeFront5.AllowDrop = true;
@@ -130,10 +130,10 @@ namespace Decent_Custom_Logic_Simulator.FrontEnd
             //this.nodeFront6.FillGradientColor = System.Drawing.Color.DeepPink;
             //this.nodeFront6.FillGradientStyle = Microsoft.VisualBasic.PowerPacks.FillGradientStyle.Central;
             //this.nodeFront6.FillStyle = Microsoft.VisualBasic.PowerPacks.FillStyle.Solid;
-            this.nodeFront6.Location = new System.Drawing.Point(0, 53);
+            this.nodeFront6.Location = new System.Drawing.Point(15, 53);
             this.nodeFront6.Name = "nodeFront6";
             this.nodeFront6.Size = new System.Drawing.Size(14, 14);
-            this.nodeFront6.BackColor = System.Drawing.Color.Black;
+            //this.nodeFront6.BackColor = System.Drawing.Color.Black;
             this.nodeFront6.DragDrop += new System.Windows.Forms.DragEventHandler(this.nodeFront6_DragDrop);
             this.nodeFront6.DragEnter += new System.Windows.Forms.DragEventHandler(this.nodeFront6_DragEnter);
             this.nodeFront6.AllowDrop = true;
