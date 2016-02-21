@@ -25,9 +25,10 @@ namespace OUR_LogicSimulator
             int y = 30;
             //e.Graphics.DrawLine(Pens.Black, x, y, x + 40, y);
             //e.Graphics.DrawLine(Pens.Black, x, y + 20, x + 40, y + 20);
-            e.Graphics.DrawArc(myPen, x + 5, y - 20, 30, 60, 270, 180);
+
             e.Graphics.DrawArc(myPen, x + 10, y - 20, 30, 60, 270, 180);
-            e.Graphics.DrawArc(myPen, x + 2, y - 20, 60, 60, 270, 180);
+            e.Graphics.DrawArc(myPen, x, y - 20, 45, 60, 270, 180);
+            e.Graphics.DrawArc(myPen, x - 10, y - 20, 80, 60, 270, 180);
             //e.Graphics.DrawLine(Pens.Black, x + 60, y + 10, x + 100, y + 10);
         }
 

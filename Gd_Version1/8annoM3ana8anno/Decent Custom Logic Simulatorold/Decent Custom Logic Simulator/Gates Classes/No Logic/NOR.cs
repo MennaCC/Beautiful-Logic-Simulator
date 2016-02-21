@@ -19,7 +19,7 @@ namespace OUR_LogicSimulator
         #region frontEnd
        public override void Draw(PaintEventArgs e)
        {
-          // SolidBrush sb = new SolidBrush(Color.Black);
+            // SolidBrush sb = new SolidBrush(Color.Black);
 
             int x = 0;
             int y = 30;

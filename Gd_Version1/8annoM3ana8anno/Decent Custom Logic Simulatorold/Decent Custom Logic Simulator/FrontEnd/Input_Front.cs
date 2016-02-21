@@ -46,7 +46,7 @@ namespace Decent_Custom_Logic_Simulator.FrontEnd
         {
             Node_Front rec = new Node_Front();
             Form1.getInstance().senderNode = this.newNode;
-
+            Form1.getInstance().startPointHyma2 = new Point(e.X + this.Location.X + this.nodeFront4.Location.X, e.Y + this.Location.Y + this.nodeFront4.Location.Y);
             rec.DoDragDrop(rec, DragDropEffects.Copy);
             rec.BringToFront();
         }

@@ -20,7 +20,7 @@ namespace OUR_LogicSimulator
         public override void Draw(PaintEventArgs e)
         {
 
-           // SolidBrush sb = new SolidBrush(Color.Black);
+            // SolidBrush sb = new SolidBrush(Color.Black);
             int x = 0;
             int y = 20;
             //e.Graphics.DrawLine(Pens.Black, x, y, x + 30, y);

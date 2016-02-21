@@ -51,9 +51,19 @@ namespace Decent_Custom_Logic_Simulator
         List<Point> p2List = new List<Point>();
         public void laE7naM4HnhazzarDaHytsallem(customControl senderCtrl)
         {
-            p1List.Add(new Point(startPointHyma2.X + senderCtrl.Location.X, startPointHyma2.Y + senderCtrl.Location.Y));
-            p2List.Add(new Point(end.X + senderCtrl.Location.X, end.Y + senderCtrl.Location.Y));
-
+            p1List.Add(new Point(startPointHyma2.X, startPointHyma2.Y));
+            p2List.Add(new Point(end.X, end.Y));
+            Graphics dc = panel2.CreateGraphics();
+            using (var p = new Pen(Color.Black, 4))
+            {
+                for (int x = 0; x < p1List.Count; x++)
+                {
+                    dc.DrawLine(p, p1List[x], p2List[x]);
+                }
+                p.Dispose();
+            }
+            dc.Dispose();
+            Invalidate();
         }
 
         private void Panel2_Paint(object sender, PaintEventArgs e)
@@ -81,7 +91,7 @@ namespace Decent_Custom_Logic_Simulator
         {
             string txt = e.X.ToString() + " " + e.Y.ToString();
             textBoxLocationEnd.Text = txt;
-            DrawWire(e);
+            //DrawWire(e);
             //Microsoft.VisualBasic.PowerPacks.RectangleShape rec;
 
         }

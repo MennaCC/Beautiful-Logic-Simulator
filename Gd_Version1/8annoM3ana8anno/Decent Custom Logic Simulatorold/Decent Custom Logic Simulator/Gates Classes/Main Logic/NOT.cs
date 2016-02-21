@@ -20,16 +20,16 @@ namespace OUR_LogicSimulator
 
        public override void Draw(PaintEventArgs e)
        {
-         //  SolidBrush sb = new SolidBrush(Color.Black);
+            //  SolidBrush sb = new SolidBrush(Color.Black);
 
-           int x = 0;
+            int x = 0;
             int y = 40;
 
             //e.Graphics.DrawLine(Pens.Black, x, y, x + 40, y);
-            e.Graphics.DrawLine(myPen, x + 40, y - 20, x + 40, y + 20);
-            e.Graphics.DrawLine(myPen, x + 40, y - 20, x + 60, y);
-            e.Graphics.DrawLine(myPen, x + 40, y + 20, x + 60, y);
-            e.Graphics.DrawArc(myPen, x + 60, y - 5, 10, 10, 0, 360);
+            e.Graphics.DrawLine(myPen, x + 15, y - 30, x + 15, y + 20);
+            e.Graphics.DrawLine(myPen, x + 15, y - 30, x + 60, y - 10);
+            e.Graphics.DrawLine(myPen, x + 15, y + 20, x + 60, y - 10);
+            e.Graphics.DrawArc(myPen, x + 60, y - 10, 10, 10, 0, 360);
             //e.Graphics.DrawLine(Pens.Black, x + 70, y, x + 100, y);
         }
 
@@ -45,7 +45,7 @@ namespace OUR_LogicSimulator
         //        this.calculate();
         //        Out = this.Output.GetValue();
         //    }
-            
+
 
         //}
         public NOT(Node Input1, Node Out)

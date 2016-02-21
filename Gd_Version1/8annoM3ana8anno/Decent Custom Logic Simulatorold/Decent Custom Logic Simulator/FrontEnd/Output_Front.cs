@@ -53,11 +53,12 @@ namespace Decent_Custom_Logic_Simulator.FrontEnd
 
         private void nodeFront5_DragDrop(object sender, DragEventArgs e)
         {
-            ((Node_Front)e.Data.GetData(typeof(Node_Front))).Parent = (Node_Front)sender;
-
-            //Get the output node of the sender gate and add it to the List of Inputs in the reciever Gate i.e this gate
             this.newInputNode = Form1.getInstance().senderNode;
             newInputNode.AddToGatesOrLEDsList(this);
+            ((Node_Front)e.Data.GetData(typeof(Node_Front))).Parent = (Node_Front)sender;
+            Form1.getInstance().end = new Point(this.Location.X, this.Location.Y + 15);
+            Form1.getInstance().laE7naM4HnhazzarDaHytsallem(this);
+            //Get the output node of the sender gate and add it to the List of Inputs in the reciever Gate i.e this gate
         }
 
         private void nodeFront5_DragEnter(object sender, DragEventArgs e)

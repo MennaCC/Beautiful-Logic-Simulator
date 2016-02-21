@@ -35,26 +35,23 @@ namespace Decent_Custom_Logic_Simulator.FrontEnd
         }
         private void rectangleShapeMouseDowmn(object sender, MouseEventArgs e)
         {
-            Node_Front rec = new Node_Front();
             Form1.getInstance().setSenderNode(this.g.GetOp());
-            Form1.getInstance().startPointHyma2 = new Point(e.X, e.Y);
+            Form1.getInstance().startPointHyma2 = new Point(e.X + this.Location.X + this.nodeFront4.Location.X, e.Y + this.Location.Y + this.nodeFront4.Location.Y);
+            Node_Front rec = new Node_Front();
             rec.DoDragDrop(rec, DragDropEffects.Copy);
-            
             rec.BringToFront();
-            
+
 
         }
 
         private void nodeFront5_DragDrop(object sender, DragEventArgs e)
         {
-            ((Node_Front)e.Data.GetData(typeof(Node_Front))).Parent = (Node_Front)sender;
-
-            //Get the output node of the sender gate and add it to the List of Inputs in the reciever Gate i.e this gate
             Node senderNd = Form1.getInstance().getSenderNode();
             this.g.AddIp(senderNd, this);
-
-            Form1.getInstance().end = new Point(e.X, e.Y);
+            Form1.getInstance().end = new Point(this.Location.X, this.Location.Y + 15);
             Form1.getInstance().laE7naM4HnhazzarDaHytsallem(this);
+            ((Node_Front)e.Data.GetData(typeof(Node_Front))).Parent = (Node_Front)sender;
+            Invalidate();
         }
 
         private void nodeFront5_DragEnter(object sender, DragEventArgs e)
@@ -68,6 +65,34 @@ namespace Decent_Custom_Logic_Simulator.FrontEnd
                 e.Effect = DragDropEffects.None;
             }
         }
+
+        private void nodeFront6_DragDrop(object sender, DragEventArgs e)
+        {
+            Node senderNd = Form1.getInstance().getSenderNode();
+            this.g.AddIp(senderNd, this);
+            Form1.getInstance().end = new Point(this.Location.X + this.nodeFront6.Location.X, this.Location.Y+ this.nodeFront6.Location.Y + 15);
+            Form1.getInstance().laE7naM4HnhazzarDaHytsallem(this);
+            ((Node_Front)e.Data.GetData(typeof(Node_Front))).Parent = (Node_Front)sender;
+            Invalidate();
+        }
+
+        private void nodeFront6_DragEnter(object sender, DragEventArgs e)
+        {
+            if (e.Data.GetDataPresent(typeof(Node_Front)))
+            {
+                e.Effect = DragDropEffects.Copy;
+            }
+            else
+            {
+                e.Effect = DragDropEffects.None;
+            }
+        }
+
+
+
+
+
+
         #endregion
 
 
