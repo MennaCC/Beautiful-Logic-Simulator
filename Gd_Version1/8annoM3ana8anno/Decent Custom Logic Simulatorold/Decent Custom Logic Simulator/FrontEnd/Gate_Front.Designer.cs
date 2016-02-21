@@ -107,7 +107,7 @@ namespace Decent_Custom_Logic_Simulator.FrontEnd
             this.nodeFront5.Location = new System.Drawing.Point(15, 11);
             this.nodeFront5.Name = "nodeFront5";
             this.nodeFront5.Size = new System.Drawing.Size(14, 14);
-            this.nodeFront5.BackColor = System.Drawing.Color.Black;
+            //this.nodeFront5.BackColor = System.Drawing.Color.Black;
             this.nodeFront5.DragDrop += new System.Windows.Forms.DragEventHandler(this.nodeFront5_DragDrop);
             this.nodeFront5.DragEnter += new System.Windows.Forms.DragEventHandler(this.nodeFront5_DragEnter);
             this.nodeFront5.AllowDrop = true;
@@ -133,7 +133,7 @@ namespace Decent_Custom_Logic_Simulator.FrontEnd
             this.nodeFront6.Location = new System.Drawing.Point(15, 53);
             this.nodeFront6.Name = "nodeFront6";
             this.nodeFront6.Size = new System.Drawing.Size(14, 14);
-            this.nodeFront6.BackColor = System.Drawing.Color.Black;
+            //this.nodeFront6.BackColor = System.Drawing.Color.Black;
             this.nodeFront6.DragDrop += new System.Windows.Forms.DragEventHandler(this.nodeFront6_DragDrop);
             this.nodeFront6.DragEnter += new System.Windows.Forms.DragEventHandler(this.nodeFront6_DragEnter);
             this.nodeFront6.AllowDrop = true;
