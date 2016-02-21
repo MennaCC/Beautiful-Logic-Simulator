@@ -32,7 +32,7 @@
             // 
             // customControl
             // 
-            this.BackColor = System.Drawing.Color.LightGray;
+            this.BackColor = System.Drawing.Color.Snow;
             this.Size = new System.Drawing.Size(120, 79);
             // this.Paint += new System.Windows.Forms.PaintEventHandler(this.DecentUserControl_Paint);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.makeActive);

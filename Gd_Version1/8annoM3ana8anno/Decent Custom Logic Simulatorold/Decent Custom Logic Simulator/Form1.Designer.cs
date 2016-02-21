@@ -329,6 +329,7 @@ namespace Decent_Custom_Logic_Simulator
             this.NOT.TabIndex = 2;
             this.NOT.Text = "NOT";
             this.NOT.Paint += new System.Windows.Forms.PaintEventHandler(this.customControlNOT_Paint);
+            this.NOT.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Gate_MouseDown);
             // 
             // label7
             // 
