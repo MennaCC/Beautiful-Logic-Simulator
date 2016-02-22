@@ -45,6 +45,7 @@ namespace Decent_Custom_Logic_Simulator.FrontEnd
         private void rectangleShapeMouseDowmn(object sender, MouseEventArgs e)
         {
             Node_Front rec = new Node_Front();
+           // Form1.getInstance().Nodes.Add(rec);
             Form1.getInstance().senderNode = this.newNode;
             Form1.getInstance().startPointHyma2 = new Point(e.X + this.Location.X + this.nodeFront4.Location.X, e.Y + this.Location.Y + this.nodeFront4.Location.Y);
             rec.DoDragDrop(rec, DragDropEffects.Copy);

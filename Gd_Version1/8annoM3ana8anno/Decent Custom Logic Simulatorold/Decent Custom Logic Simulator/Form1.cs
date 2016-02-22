@@ -35,6 +35,11 @@ namespace Decent_Custom_Logic_Simulator
         #endregion
 
         #region ana w shimaa w hager :'D
+        public List<Gate_Front> gates = new List<Gate_Front>();
+        public List<Input_Front> switches = new List<Input_Front>();
+        public List<Output_Front> Leds = new List<Output_Front>();
+        public List<Node_Front> Nodes = new List<Node_Front>();
+
 
         public Node senderNode;
         public Node getSenderNode()
@@ -128,19 +133,15 @@ namespace Decent_Custom_Logic_Simulator
         {
 
         }
-
+        
+     
         private void Gate_MouseDown(object sender, MouseEventArgs e)
         {
 
-            textBoxLocation.Text = ActiveControl.Name.ToString();
-           
-
-              
-                Gate_Front newGate = new Gate_Front(this.ActiveControl.Name.ToString());
-               
-            
-
-            GateFrontList.Add(newGate);
+           textBoxLocation.Text = ActiveControl.Name.ToString();
+           Gate_Front newGate = new Gate_Front(this.ActiveControl.Name.ToString());
+           Form1.getInstance().gates.Add(newGate);
+           newGate.createGateDueToType();
             //  DecentUserControl DecentUserControlChild = new DecentUserControl(ActiveControl.Name.ToString());
             Point d;
             d = Gate_Front.MousePosition;
@@ -312,6 +313,7 @@ namespace Decent_Custom_Logic_Simulator
         {
             textBoxLocation.Text = ActiveControl.Name.ToString();
             Input_Front newGate = new Input_Front ();
+            Form1.getInstance().switches.Add(newGate);
             //GateFrontList.Add(newGate);
             Point d;
             d = Gate_Front.MousePosition;
@@ -330,6 +332,7 @@ namespace Decent_Custom_Logic_Simulator
         {
             textBoxLocation.Text = ActiveControl.Name.ToString();
             Output_Front newGate = new Output_Front();
+            Form1.getInstance().Leds.Add(newGate);
             //GateFrontList.Add(newGate);
             Point d;
             d = Gate_Front.MousePosition;

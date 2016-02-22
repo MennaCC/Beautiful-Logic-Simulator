@@ -38,6 +38,7 @@ namespace Decent_Custom_Logic_Simulator.FrontEnd
             Form1.getInstance().setSenderNode(this.g.GetOp());
             Form1.getInstance().startPointHyma2 = new Point(e.X + this.Location.X + this.nodeFront4.Location.X, e.Y + this.Location.Y + this.nodeFront4.Location.Y);
             Node_Front rec = new Node_Front();
+           // Form1.getInstance().Nodes.Add(rec);
             rec.DoDragDrop(rec, DragDropEffects.Copy);
             rec.BringToFront();
 
@@ -96,7 +97,7 @@ namespace Decent_Custom_Logic_Simulator.FrontEnd
         #endregion
 
 
-        public Gate g;
+        public Gate g ;
 
         #region Private Attributes
 
@@ -107,7 +108,8 @@ namespace Decent_Custom_Logic_Simulator.FrontEnd
 
         protected override void OnPaint(PaintEventArgs pe)
         {
-            createGateDueToType(pe);
+            Form1.getInstance().gates[Form1.getInstance().gates.Count - 1].g.Draw(pe);
+           
             base.OnPaint(pe);
 
         }
@@ -124,8 +126,8 @@ namespace Decent_Custom_Logic_Simulator.FrontEnd
         /// <param name="e"></param>
 
         
-
-        private void createGateDueToType(PaintEventArgs e)
+       
+        public void createGateDueToType()
         {
 
             //switch can be replaced by a one line of code using runtime Creation ((gotta GOOGLE it))
@@ -155,11 +157,11 @@ namespace Decent_Custom_Logic_Simulator.FrontEnd
                 //case "input_Front1":
                 //    g = new XNOR();
                 //    break;
-                default:
-                    g = null;
-                    break;
+                //default:
+                //    g = null;
+                //    break;
             }
-            g.Draw(e);
+           // g.Draw(e);
 
         }
     }
