@@ -39,6 +39,9 @@ namespace Decent_Custom_Logic_Simulator
             this.textBoxLocation = new System.Windows.Forms.TextBox();
             this.textBoxLocationEnd = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.output_Front1 = new Decent_Custom_Logic_Simulator.FrontEnd.Output_Front();
+            this.input_Front2 = new Decent_Custom_Logic_Simulator.FrontEnd.Input_Front();
+            this.input_Front1 = new Decent_Custom_Logic_Simulator.FrontEnd.Input_Front();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.AND = new Decent_Custom_Logic_Simulator.FrontEnd.customControl();
             this.label1 = new System.Windows.Forms.Label();
@@ -60,9 +63,6 @@ namespace Decent_Custom_Logic_Simulator
             this.label9 = new System.Windows.Forms.Label();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.input_Front1 = new Decent_Custom_Logic_Simulator.FrontEnd.Input_Front();
-            this.input_Front2 = new Decent_Custom_Logic_Simulator.FrontEnd.Input_Front();
-            this.output_Front1 = new Decent_Custom_Logic_Simulator.FrontEnd.Output_Front();
             this.toolStrip1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
@@ -92,7 +92,7 @@ namespace Decent_Custom_Logic_Simulator
             // toolStripSaveButton
             // 
             this.toolStripSaveButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripSaveButton.Image = ((System.Drawing.Image)(resources.GetObject("toolStripSaveButton.Image")));
+            this.toolStripSaveButton.Image = global::Decent_Custom_Logic_Simulator.Properties.Resources.images;
             this.toolStripSaveButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripSaveButton.Name = "toolStripSaveButton";
             this.toolStripSaveButton.Size = new System.Drawing.Size(23, 22);
@@ -102,7 +102,7 @@ namespace Decent_Custom_Logic_Simulator
             // toolStripOpenButton
             // 
             this.toolStripOpenButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripOpenButton.Image = ((System.Drawing.Image)(resources.GetObject("toolStripOpenButton.Image")));
+            this.toolStripOpenButton.Image = global::Decent_Custom_Logic_Simulator.Properties.Resources.importtimages;
             this.toolStripOpenButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripOpenButton.Name = "toolStripOpenButton";
             this.toolStripOpenButton.Size = new System.Drawing.Size(23, 22);
@@ -144,6 +144,30 @@ namespace Decent_Custom_Logic_Simulator
             this.panel2.Size = new System.Drawing.Size(650, 402);
             this.panel2.TabIndex = 15;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.Panel2_Paint);
+            // 
+            // output_Front1
+            // 
+            this.output_Front1.BackColor = System.Drawing.Color.Snow;
+            this.output_Front1.Location = new System.Drawing.Point(432, 79);
+            this.output_Front1.Name = "output_Front1";
+            this.output_Front1.Size = new System.Drawing.Size(50, 50);
+            this.output_Front1.TabIndex = 15;
+            // 
+            // input_Front2
+            // 
+            this.input_Front2.BackColor = System.Drawing.Color.Snow;
+            this.input_Front2.Location = new System.Drawing.Point(231, 120);
+            this.input_Front2.Name = "input_Front2";
+            this.input_Front2.Size = new System.Drawing.Size(50, 50);
+            this.input_Front2.TabIndex = 14;
+            // 
+            // input_Front1
+            // 
+            this.input_Front1.BackColor = System.Drawing.Color.Snow;
+            this.input_Front1.Location = new System.Drawing.Point(231, 31);
+            this.input_Front1.Name = "input_Front1";
+            this.input_Front1.Size = new System.Drawing.Size(50, 50);
+            this.input_Front1.TabIndex = 13;
             // 
             // flowLayoutPanel1
             // 
@@ -359,30 +383,6 @@ namespace Decent_Custom_Logic_Simulator
             this.label9.Size = new System.Drawing.Size(18, 11);
             this.label9.TabIndex = 8;
             this.label9.Text = "LED";
-            // 
-            // input_Front1
-            // 
-            this.input_Front1.BackColor = System.Drawing.Color.Snow;
-            this.input_Front1.Location = new System.Drawing.Point(231, 31);
-            this.input_Front1.Name = "input_Front1";
-            this.input_Front1.Size = new System.Drawing.Size(50, 50);
-            this.input_Front1.TabIndex = 13;
-            // 
-            // input_Front2
-            // 
-            this.input_Front2.BackColor = System.Drawing.Color.Snow;
-            this.input_Front2.Location = new System.Drawing.Point(231, 120);
-            this.input_Front2.Name = "input_Front2";
-            this.input_Front2.Size = new System.Drawing.Size(50, 50);
-            this.input_Front2.TabIndex = 14;
-            // 
-            // output_Front1
-            // 
-            this.output_Front1.BackColor = System.Drawing.Color.Snow;
-            this.output_Front1.Location = new System.Drawing.Point(432, 79);
-            this.output_Front1.Name = "output_Front1";
-            this.output_Front1.Size = new System.Drawing.Size(50, 50);
-            this.output_Front1.TabIndex = 15;
             // 
             // Form1
             // 
